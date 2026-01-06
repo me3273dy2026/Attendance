@@ -172,7 +172,7 @@
 </div>
 
 <script>
-const URL = "https://script.google.com/macros/s/AKfycbx-WbeoNDdsYoouQIpgACzvB1TBOwckx1Cw60lE9jq__DGgP1okzgDmMNdcRvHt6qZ7ig/exec";
+const URL = "https://script.google.com/macros/s/AKfycby8r8kA6O6u69YIEtWCE-DowvMNZ2TGlh-4Otz2-em5aG7AP8f1rPxF61lWg9NOLzMq/exec";
 let students = [];
 
 /* ---------- DATE ---------- */
@@ -225,15 +225,18 @@ function render() {
 
     d.innerHTML = `
       <div class="info">${s.roll}<br>${s.name}</div>
+
       <div class="stats" id="stats-${i}">
         ${s.attended} / ${s.total} (${getPercent(s.attended, s.total)}%)
       </div>
+
       <div class="progress-container">
         <div class="progress-bar ${getBarClass(s.attended, s.total)}"
              id="bar-${i}"
              style="width:${getPercent(s.attended, s.total)}%">
         </div>
       </div>
+
       <div class="row">
         <div class="btn" onclick="mark(${i}, 'Present', this)">Present</div>
         <div class="btn" onclick="mark(${i}, 'Absent', this)">Absent</div>
